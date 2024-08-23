@@ -1,0 +1,13 @@
+version: '3'
+
+tasks:
+  activate:
+    cmds:
+      - source .venv/bin/activate
+    silent: true
+  compile:
+    cmds:
+      - qmk compile -kb sofle -km preimmortal -e CONVERT_TO=elite_pi
+  flash:
+    cmds:
+      - qmk flash --keyboard sofle --keymap preimmortal
