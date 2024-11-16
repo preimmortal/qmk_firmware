@@ -5,9 +5,17 @@ tasks:
     cmds:
       - source .venv/bin/activate
     silent: true
-  compile:
+  compile-sofle:
     cmds:
       - qmk compile -kb sofle -km preimmortal -e CONVERT_TO=elite_pi
-  flash:
+  flash-sofle:
     cmds:
       - qmk flash --keyboard sofle --keymap preimmortal
+
+  compile-crkbd:
+    cmds:
+      - qmk compile -kb crkbd -km preimmortal
+  flash-crkbd:
+    cmds:
+      - qmk flash --keyboard crkbd --keymap preimmortal
+
