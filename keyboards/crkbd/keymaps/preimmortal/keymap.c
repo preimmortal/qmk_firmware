@@ -76,11 +76,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [4] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      QK_BOOT, RGB_HUI, RGB_SAI, RGB_VAI, RGB_HUD, RGB_SAD,                      RGB_VAD, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+      QK_BOOT, RM_HUEU, RM_SATU, RM_VALU, RM_HUED, RM_SATD,                      RM_VALD, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      RGB_TOG,   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,                       KC_F11,  KC_F12, XXXXXXX, XXXXXXX, XXXXXXX,   DF(0),
+      RM_TOGG,   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,                       KC_F11,  KC_F12, XXXXXXX, XXXXXXX, XXXXXXX,   DF(0),
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      RGB_MOD,   KC_F6,   KC_F7,   KC_F8,   KC_F9,  KC_F10,                      KC_CAPS,  KC_NUM, XXXXXXX, XXXXXXX, XXXXXXX,   DF(1),
+      RM_NEXT,   KC_F6,   KC_F7,   KC_F8,   KC_F9,  KC_F10,                      KC_CAPS,  KC_NUM, XXXXXXX, XXXXXXX, XXXXXXX,   DF(1),
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           KC_LGUI, _______,  KC_SPC,     KC_ENT, _______, KC_RALT
                                       //`--------------------------'  `--------------------------'
