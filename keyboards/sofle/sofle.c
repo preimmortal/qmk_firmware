@@ -122,10 +122,10 @@ bool encoder_update_kb(uint8_t index, bool clockwise) {
     }
     if (index == 0) {
         if (clockwise) {
-            tap_code(KC_MS_WH_DOWN);
+            tap_code(MS_WHLD);
 
         } else {
-            tap_code(KC_MS_WH_UP);
+            tap_code(MS_WHLU);
         }
     } else if (index == 1) {
         if (clockwise) {
