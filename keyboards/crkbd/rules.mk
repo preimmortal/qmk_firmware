@@ -1,2 +1,3 @@
 BOOTLOADER = atmel-dfu
 DEFERRED_EXEC_ENABLE = yes
+WPM_ENABLE = yes
