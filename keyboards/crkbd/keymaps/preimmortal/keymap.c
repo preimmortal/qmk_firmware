@@ -18,6 +18,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include QMK_KEYBOARD_H
 
+#include "os_detection.h"
+
 #ifdef OLED_ENABLE
 
 // Set Rotation
@@ -276,6 +278,27 @@ static void oled_render_status(void) {
     led_t led_state = host_keyboard_led_state();
     oled_write_P(PSTR("Caps\n"), false);
     oled_write_P(led_state.caps_lock ? PSTR("ON \n\n") : PSTR("OFF\n\n"), false);
+
+    // OS
+    oled_write_P(PSTR("OS\n"), false);
+    switch (detected_host_os()) {
+        case OS_LINUX:
+            oled_write_P(PSTR("Linux\n"), false);
+            break;
+        case OS_WINDOWS:
+            oled_write_P(PSTR("Win\n"), false);
+            break;
+        case OS_MACOS:
+            oled_write_P(PSTR("Mac\n"), false);
+            break;
+        case OS_IOS:
+            oled_write_P(PSTR("iOS\n"), false);
+            break;
+        case OS_UNSURE:
+        default:
+            oled_write_P(PSTR("UNK\n"), false);
+            break;
+    }
 }
 
 // Draw to OLED
